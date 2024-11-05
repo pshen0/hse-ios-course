@@ -14,21 +14,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        let window = UIWindow(frame: UIScreen.main.bounds)
-                
-                let viewController = WishMakerViewController()
-                let presenter = ColorPresenterImplementation()
-                let interactor = ColorInteractor()
-
-                viewController.presenter = presenter
-                presenter.view = viewController
-                presenter.interactor = interactor
-                interactor.presenter = presenter
-
-                window.rootViewController = viewController
-                self.window = window
-                window.makeKeyAndVisible()
-                
                 return true
     }
 

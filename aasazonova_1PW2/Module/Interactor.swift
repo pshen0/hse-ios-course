@@ -8,13 +8,13 @@
 import Foundation
 
 protocol ColorInteractorInput {
-    func updateColors(red: Float, green: Float, blue: Float)
+    func updateColors(red: CGFloat, green: CGFloat, blue: CGFloat)
 }
 
 class ColorInteractor: ColorInteractorInput {
     var presenter: ColorPresenterInput!
 
-    func updateColors(red: Float, green: Float, blue: Float) {
+    func updateColors(red: CGFloat, green: CGFloat, blue: CGFloat) {
         presenter.colorsDidUpdate(red: red, green: green, blue: blue)
     }
 }
