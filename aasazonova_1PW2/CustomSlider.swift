@@ -9,6 +9,7 @@ import UIKit
 
 final class CustomSlider: UIView {
     
+    // MARK: - Constants
     enum Constants {
         static let titleTop: CGFloat = 10
         static let titleLeading: CGFloat = 20
@@ -17,6 +18,7 @@ final class CustomSlider: UIView {
         static let sliderLeading: CGFloat = 20
     }
     
+    // MARK: - Variables
     var valueChanged: ((Double) -> Void)?
     var slider = UISlider()
     var titleView = UILabel()
@@ -38,7 +40,14 @@ final class CustomSlider: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
     }
-
+    
+    // MARK: - Actions
+    @objc
+    private func sliderValueChanged() {
+        valueChanged?(Double(slider.value))
+    }
+    
+    // MARK: - Private func
     private func configureUI() {
         backgroundColor = .white
         translatesAutoresizingMaskIntoConstraints = false
@@ -58,10 +67,5 @@ final class CustomSlider: UIView {
             slider.bottomAnchor.constraint(equalTo: bottomAnchor, constant: Constants.sliderBottom),
             slider.leadingAnchor.constraint(equalTo: leadingAnchor, constant: Constants.sliderLeading)
         ])
-    }
-
-    @objc
-    private func sliderValueChanged() {
-        valueChanged?(Double(slider.value))
     }
 }

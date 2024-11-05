@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0F7BE0752CDAC541006373A2 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7BE0742CDAC53C006373A2 /* Router.swift */; };
+		0F7BE0782CDAD120006373A2 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 0F7BE0772CDAD0E7006373A2 /* README.md */; };
 		6DA449302CD9298B00D82D3C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DA4492F2CD9298B00D82D3C /* AppDelegate.swift */; };
 		6DA449322CD9298B00D82D3C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DA449312CD9298B00D82D3C /* SceneDelegate.swift */; };
 		6DA449342CD9298B00D82D3C /* WishMakerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DA449332CD9298B00D82D3C /* WishMakerViewController.swift */; };
@@ -20,6 +21,7 @@
 
 /* Begin PBXFileReference section */
 		0F7BE0742CDAC53C006373A2 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		0F7BE0772CDAD0E7006373A2 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		6DA4492C2CD9298B00D82D3C /* aasazonova_1PW2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = aasazonova_1PW2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DA4492F2CD9298B00D82D3C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6DA449312CD9298B00D82D3C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -73,6 +75,7 @@
 		6DA4492E2CD9298B00D82D3C /* aasazonova_1PW2 */ = {
 			isa = PBXGroup;
 			children = (
+				0F7BE0772CDAD0E7006373A2 /* README.md */,
 				6DA4492F2CD9298B00D82D3C /* AppDelegate.swift */,
 				6DA449312CD9298B00D82D3C /* SceneDelegate.swift */,
 				6DA449432CD9577000D82D3C /* CustomSlider.swift */,
@@ -142,6 +145,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F7BE0782CDAD120006373A2 /* README.md in Resources */,
 				6DA4493C2CD9298E00D82D3C /* LaunchScreen.storyboard in Resources */,
 				6DA449392CD9298E00D82D3C /* Assets.xcassets in Resources */,
 			);

@@ -7,13 +7,14 @@
 
 import UIKit
 
-
+// MARK: - ColorView Protocol
 protocol ColorView: AnyObject {
     func updateBackgroundColor(red: CGFloat, green: CGFloat, blue: CGFloat)
 }
 
 final class WishMakerViewController: UIViewController, ColorView {
     
+    // MARK: - Constants
     enum Constants {
         static let titleText: String = "WishMaker"
         static let titleSize: CGFloat = 32
@@ -39,8 +40,11 @@ final class WishMakerViewController: UIViewController, ColorView {
         
         static let sliderMin: Double = 0
         static let sliderMax: Double = 1
+        
+        static let numberLines: Int = 0
     }
     
+    // MARK: - Variables
     private var titleView = UILabel()
     private var discriptionView = UILabel()
     private var sliderRed = CustomSlider()
@@ -51,12 +55,14 @@ final class WishMakerViewController: UIViewController, ColorView {
     private var greenLevel = Constants.colorIntensity
     var presenter: ColorPresenter!
     
+    // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
         
     }
     
+    // MARK: - Private funcs
     private func configureUI() {
         view.backgroundColor = .black
         configureTitle()
@@ -67,7 +73,7 @@ final class WishMakerViewController: UIViewController, ColorView {
     private func configureTitle() {
         titleView.translatesAutoresizingMaskIntoConstraints = false
         titleView.text = Constants.titleText
-        discriptionView.numberOfLines = 0
+        discriptionView.numberOfLines = Constants.numberLines
         discriptionView.lineBreakMode = .byWordWrapping
         titleView.textColor = .white
         titleView.font = UIFont.boldSystemFont(ofSize: Constants.titleSize)
@@ -81,7 +87,7 @@ final class WishMakerViewController: UIViewController, ColorView {
     private func configureDiscription() {
         discriptionView.translatesAutoresizingMaskIntoConstraints = false
         discriptionView.text = Constants.discriptionText
-        discriptionView.numberOfLines = 0
+        discriptionView.numberOfLines = Constants.numberLines
         discriptionView.lineBreakMode = .byWordWrapping
         discriptionView.textColor = .white
         discriptionView.font = UIFont.systemFont(ofSize: Constants.discriptionSize)
@@ -130,7 +136,8 @@ final class WishMakerViewController: UIViewController, ColorView {
             self?.presenter.slidersValueDidChange(red: self?.redLevel ?? 0, green: self?.greenLevel ?? 0, blue: self?.blueLevel ?? 0)
         }
     }
-
+    
+    // MARK: - Func
     func updateBackgroundColor(red: CGFloat, green: CGFloat, blue: CGFloat) {
         view.backgroundColor = UIColor(red: red, green: green, blue: blue, alpha: Constants.colorSaturation)
     }
